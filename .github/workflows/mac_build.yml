@@ -25,6 +25,7 @@ jobs:
 
     - name: Install Mac Stockfish
       run: |
+        export HOMEBREW_NO_REQUIRE_TAP_TRUST=1
         brew install stockfish
         # Verify it's installed and find the path
         which stockfish
