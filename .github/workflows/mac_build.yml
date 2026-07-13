@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
@@ -54,7 +54,7 @@ jobs:
         zip -r KingsTrial_Mac_2026_07_13.zip KingsTrial.app
 
     - name: Upload Mac Build
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: KingsTrial_Mac_2026_07_13
         path: dist/KingsTrial_Mac_2026_07_13.zip
