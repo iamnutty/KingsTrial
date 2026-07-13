@@ -1,0 +1,60 @@
+name: Build KingsTrial Mac
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pygame stockfish pyinstaller
+
+    - name: Install Mac Stockfish
+      run: |
+        brew install stockfish
+        # Verify it's installed and find the path
+        which stockfish
+
+    - name: Build with PyInstaller
+      run: |
+        STOCKFISH_PATH=$(which stockfish)
+        echo "Using stockfish from: $STOCKFISH_PATH"
+        
+        # Note: macOS PyInstaller uses colon ':' as the separator for add-data and add-binary
+        pyinstaller --onefile --windowed --name KingsTrial \
+          --hidden-import=scenes \
+          --hidden-import=ai \
+          --hidden-import=ui \
+          --collect-all=pygame \
+          --add-data "assets:assets" \
+          --add-data "config.json:." \
+          --add-binary "$STOCKFISH_PATH:." \
+          main.py
+
+    - name: Prepare Archive
+      run: |
+        # Rename the app folder or zip it to match the requested format
+        cd dist
+        # PyInstaller --windowed creates KingsTrial.app
+        # We will zip it to preserve execution permissions and macOS bundle structure
+        zip -r KingsTrial_Mac_2026_07_13.zip KingsTrial.app
+
+    - name: Upload Mac Build
+      uses: actions/upload-artifact@v3
+      with:
+        name: KingsTrial_Mac_2026_07_13
+        path: dist/KingsTrial_Mac_2026_07_13.zip

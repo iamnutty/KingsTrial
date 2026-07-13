@@ -1,0 +1,165 @@
+{
+    "_description": "Default game theme. Uses classic wooden board colours.",
+    "board": {
+        "square_light": [
+            233,
+            236,
+            239
+        ],
+        "square_dark": [
+            173,
+            181,
+            189
+        ],
+        "border": [
+            33,
+            37,
+            41
+        ],
+        "highlight_move": [
+            100,
+            200,
+            100
+        ],
+        "restricted_low": [
+            255,
+            255,
+            230,
+            160
+        ],
+        "restricted_high": [
+            210,
+            210,
+            200,
+            160
+        ],
+        "label_text": [
+            220,
+            220,
+            220
+        ]
+    },
+    "pieces": {
+        "white": {
+            "highlight": [
+                206,
+                212,
+                218,
+                160
+            ],
+            "font_file": "Aubrey-Regular.ttf",
+            "font_size": 22,
+            "text": [
+                25,
+                25,
+                25
+            ],
+            "badge": [
+                220,
+                220,
+                200,
+                180
+            ],
+            "chars": {
+                "P": "P",
+                "N": "N",
+                "B": "B",
+                "R": "R",
+                "Q": "Q",
+                "K": "K"
+            }
+        },
+        "black": {
+            "highlight": [
+                52,
+                58,
+                64,
+                160
+            ],
+            "font_file": "Aubrey-Regular.ttf",
+            "font_size": 22,
+            "text": [
+                255,
+                255,
+                255
+            ],
+            "badge": [
+                73,
+                80,
+                87,
+                180
+            ],
+            "chars": {
+                "P": "P",
+                "N": "N",
+                "B": "B",
+                "R": "R",
+                "Q": "Q",
+                "K": "K"
+            }
+        },
+        "neutral": {
+            "highlight": [
+                47,
+                107,
+                63,
+                160
+            ],
+            "font_file": "Aubrey-Regular.ttf",
+            "font_size": 22,
+            "text": [
+                255,
+                255,
+                255
+            ],
+            "badge": [
+                81,
+                154,
+                102,
+                180
+            ],
+            "chars": {
+                "P": "P",
+                "N": "N",
+                "B": "B",
+                "R": "R",
+                "Q": "Q",
+                "K": "K"
+            }
+        }
+    },
+    "_____AUDIO_____": "Audio mapping. Use null to play nothing for a specific trigger.",
+    "sounds": {
+        "move": [
+            "sounds/selectPiece1.mp3",
+            "sounds/selectPiece2.mp3"
+        ],
+        "capture": [
+            "sounds/Shinda.mp3",
+            "sounds/Death.mp3"
+        ],
+        "spawn": [
+            "sounds/hai2.mp3",
+            "sounds/hai.mp3"
+        ],
+        "select": [
+            "sounds/selectPiece1.mp3",
+            "sounds/selectPiece2.mp3"
+        ],
+        "promote": [
+            "sounds/iko.mp3",
+            "sounds/go.mp3"
+        ],
+        "demote": [
+            "sounds/Haha.mp3"
+        ],
+        "start": [
+            "sounds/default_start.mp3"
+        ],
+        "white_win": "sounds/Haha.mp3",
+        "black_win": "sounds/Haha.mp3"
+    },
+    "music": [
+        "sounds/Oriental Battle Dance.mp3"
+    ]
+}

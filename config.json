@@ -1,0 +1,17 @@
+{
+  "single_player": true,
+  "human_colour": "white",
+  "neutral_ai": "medium",
+  "opponent_ai": "medium",
+  "time_control": "5+10",
+  "theme": "default",
+  "sfx_volume": 2,
+  "music_volume": 2,
+  "layout_file": "Captain King.csv",
+  "relay_server_url": "wss://kings-trial-server.fly.dev",
+  "relay_server_options": [
+    "wss://kings-trial-server.fly.dev",
+    "ws://localhost:8765"
+  ],
+  "last_room_code": "IBFUFZ"
+}

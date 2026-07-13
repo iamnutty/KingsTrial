@@ -1,0 +1,25 @@
+# Python Virtual Environment
+venv/
+
+# PyInstaller folders and artifacts
+build/
+dist/
+*.spec
+KingsTrial-Installer.exe
+*.7z
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Saves
+saves/
+*.kgt
+
+# Large Binaries
+stockfish/stockfish.exe
+stockfish/stockfish
