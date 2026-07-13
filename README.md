@@ -38,6 +38,33 @@ We are collecting all feedback, bug reports, and suggestions through our [itch.i
 
 ---
 
+## Installation Instructions
+
+### 📥 Windows
+1. **Download the Game:** Click the download button to save the `KingsTrial_Itch.zip` file to your computer.
+2. **Extract the Files (Important!):** Do NOT run the game from inside the ZIP file. Right-click the downloaded `.zip` file and select "Extract All...". Choose a destination folder on your computer.
+3. **Run the Game:** Open the newly extracted folder and double-click `KingsTrial.exe` to start playing.
+
+> **⚠️ Note on Windows Defender / SmartScreen:** Since King's Trial is a new indie game, Windows SmartScreen might flag it as an "Unrecognized app" the first time you run it. If you see a blue "Windows protected your PC" popup:
+> - Click **"More info"**
+> - Click **"Run anyway"**
+> 
+> *(If you ever experience issues with the AI, please ensure your antivirus isn't blocking the bundled Stockfish engine folder).*
+
+### 🍎 macOS
+1. **Download the Game:** Click the download button to save the `KingsTrial_Mac.zip` file to your Mac.
+2. **Extract the Files:** Double-click the `.zip` file to extract it. You will see the `KingsTrial.app` application.
+3. **Run the Game:** Double-click `KingsTrial.app` to start playing.
+
+> **⚠️ Note on macOS Gatekeeper:** Because King's Trial is an indie game and not signed by the Apple App Store, macOS will prevent it from running the first time. If you get a warning that the app is from an unidentified developer:
+> - **Right-click** (or Control-click) the `KingsTrial.app` icon and select **Open** from the menu.
+> - A warning will pop up. Click **Open** again to launch the game.
+> - *(Note: You only have to do this right-click process the very first time you play. After that, you can just double-click it normally!)*
+> 
+> If macOS tells you the app is "damaged and should be moved to the Trash," this is just Apple's strict quarantine system. To fix it, open the **Terminal** app and type `xattr -cr ` (with a space at the end), then drag and drop the `KingsTrial.app` into the terminal window and press Enter.
+
+---
+
 ## License
 *Copyright © 2026. All rights reserved.*
 *(Note: Final license details will be updated post-registration)*
